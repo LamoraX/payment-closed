@@ -1,37 +1,30 @@
 /* =====================================================
-   Responsive Tables – NIBS Workshop
+   Table Scrolling – NIBS Workshop (FINAL)
    ===================================================== */
 
-.table-responsive {
+/* Scroll container */
+.table-scroll {
+  width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 20px 0;
 }
 
-.table-responsive table {
+/* Actual table */
+.table-scroll table {
   width: 100%;
+  min-width: 1000px;   /* forces horizontal scroll */
   border-collapse: collapse;
-  min-width: 600px; /* prevents squashed columns */
 }
 
-.table-responsive th,
-.table-responsive td {
+/* Table cells */
+.table-scroll th,
+.table-scroll td {
   padding: 10px;
   text-align: left;
   vertical-align: top;
 }
 
-.table-responsive tr:nth-child(even) {
+/* Optional: alternate row shading */
+.table-scroll tbody tr:nth-child(even) {
   background-color: #fafafa;
-}
-
-/* FORCE horizontal scrolling for schedule tables */
-.schedule-table {
-  overflow-x: visible; /* allow child to scroll */
-}
-
-/* actual scrolling happens here */
-.schedule-table .table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
